@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>Audit Dashboard</title>
+		<link rel="icon" 
+		type="image/png" 
+		href="http://localhost/Logo.ico">
+<style type="text/css">
+body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
+iframe { border: none; }
+</style>
+<script type="text/javascript">
+var Dash = {
+    nextIndex: 0,
+
+	//Add multiple Audits here
+    dashboards: [
+    {url: "http://localhost/Dashboards/Audit_Dashboard.php", time: 15}
+    //{url: "http://localhost/Dashboards/Audit_Dashboard_2.php", time: 15},
+    //{url: "http://localhost/Dashboards/Audit_Dashboard_3.php", time: 15},
+    //{url: "http://localhost/Dashboards/Audit_Dashboard_4.php", time: 15},
+    //{url: "http://localhost/Dashboards/Audit_Dashboard_5.php", time: 45},
+    ],
+
+    display: function()
+    {
+        var dashboard = Dash.dashboards[Dash.nextIndex];
+        frames["displayArea"].location.href = dashboard.url;
+        Dash.nextIndex = (Dash.nextIndex + 1) % Dash.dashboards.length;
+        setTimeout(Dash.display, dashboard.time * 1000);
+    }
+};
+
+window.onload = Dash.display;
+</script>
+</head>
+<body>
+<iframe name="displayArea" width="100%" height="100%"></iframe>
+</body>
+</html>
