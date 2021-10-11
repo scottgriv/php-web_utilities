@@ -1,18 +1,18 @@
 # This Repository contains the following Web Applications:
 
-### Audit Dashboards
-#### A script that connects to database tables to display record counts and alerts.
-### Display Solution
-#### A script to cycle through image files in a declared directory.
-### SMB File Upload Utility
-#### A script used to upload a move a file using SMB protocol.
-### FTP File Upload Utility
-#### A script used to upload a file to a remote FTP site.
-### Batch Script Refresh Utility
-#### A script used to run a batch file through a web interface without end user server access.
+## Audit Dashboards
+Connects to database tables to display record counts and create threshold alerts.
+## Display Solution
+Cycle through image files in a declared directory.
+## SMB File Upload Utility
+Upload a move a file using SMB protocol.
+## FTP File Upload Utility
+Upload a file to a remote FTP site.
+## Batch Script Refresh Utility
+Run a batch file through a web interface without end user server access.
 
-## Author
+### Author
 Developed by Scott Grivner.
 
-## License
+### License
 This project is licensed for public use with permission from the Author.
