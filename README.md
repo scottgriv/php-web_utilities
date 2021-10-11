@@ -12,7 +12,7 @@
 #### A script used to run a batch file through a web interface without end user server access.
 
 ## Author
-Developed by Scott Grivner,
+Developed by Scott Grivner.
 
 ## License
 This project is licensed for public use with permission from the Author.
