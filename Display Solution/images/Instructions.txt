@@ -1,0 +1,14 @@
+### Weekly KPI Monitor Instructions
+
+## Accessing the web page
+
+# The URL for the monitor should be as follows: http://{Server}/DisplaySolution.php
+# Please refresh the web page once you've replaced the images. 
+
+## Adding Images
+
+# Any image placed in this folder with an extension of ".jpg" will be cycled through the monitor
+# Images must be a ".jpg" file type or else it will not be picked up by the script.
+# The naming scheme for the images will be an incremental number in order to control the sequence of the images.
+# ex. 1.jpg, 2.jpg, 3.jpg....10.jpg, etc. 
+# Failure to incorrectly name the files as the examples on the line above, will cause the script not to work.
