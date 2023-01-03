@@ -19,12 +19,3 @@ Edit the config.ini file with the needed parameters to run, ex:
 directory = images
 extension = .jpg
 seconds = 7
-
-### Author
-Developed by Scott Grivner.
-
-### Version Release and Date
-v1.0 - 03/22/17
-
-### License
-This project is licensed for public use with permission from the Author.
