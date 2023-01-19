@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<!-- Developed by: Scott Grivner -->
-<!-- Application: File Upload Utlity -->
-<!-- Version: 1.0 -->
-<!-- Date Created: 10/07/2016 -->
-<!-- Date Last Updated: 10/07/2016 -->
+<!-- Author: Scott Grivner -->
+<!-- Website: scottgrivner.dev -->
+<!-- Abstract: FTP File Upload Utility -->
 <html>
 <head>
-		<link rel="icon" 
-		type="image/png" 
-		href="Logo.ico">
-		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <title>FTP File Upload Utility</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 <script>
 function refresh(){
     // SHOW overlay
     $('#overlay').show();
     // Retrieve data:
     $.ajax({
-    url: "Complete.php",
+    url: "complete.php",
     context: document.body,
     success: function(s,x){
         $(this).html(s);
@@ -51,11 +48,11 @@ button
 </head>
 <body>
 <div style="text-align:center;">
-<IMG SRC="Logo.png"></div>
+<IMG SRC="logo.png"></div>
 <br>
 <div style="text-align:center;"><b>Select File to Upload:</b></div>
 <div style="text-align:center;">
-<form action="Complete.php" enctype="multipart/form-data" method="post">
+<form action="complete.php" enctype="multipart/form-data" method="post">
 <br>
 Filename: <input type="file" name="file">
 <br>

@@ -1,15 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<!-- Developed by: Scott Grivner -->
-<!-- Application: Audit Dashboard -->
-<!-- Version: 1.0 -->
-<!-- Date Created: 11/07/2016 -->
-<!-- Date Last Updated: 11/07/2016 -->
+<!-- Author: Scott Grivner -->
+<!-- Website: scottgrivner.dev -->
+<!-- Abstract: Audit Dashboards -->
 <html lang="en">
 <head>
-<title>Audit Dashboard</title>
-		<link rel="icon" 
-		type="image/png" 
-		href="http://localhost/Logo.ico">
+    <title>Audit Dashboards</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
 <style type="text/css">
 body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
 iframe { border: none; }
@@ -18,10 +14,10 @@ iframe { border: none; }
 var Dash = {
     nextIndex: 0,
 
-	//Add multiple Audits here
+	//Add multiple Audits here and adjust the time (in seconds)
     dashboards: [
-    {url: "http://localhost/Dashboards/Audit_Dashboard.php", time: 15}
-    //{url: "http://localhost/Dashboards/Audit_Dashboard_2.php", time: 15}, //Optional: Create a copy of the original script and append a number to it.
+    {url: "http://localhost/Dashboards/Audit_Dashboard.php", time: 15} // Point this towards the localhost folder path where the Audit_Dashboard.php file is
+    //{url: "http://localhost/Dashboards/Audit_Dashboard_2.php", time: 15}, //Optional: Create a copy of the original script and append a number to it and change DB locations.
     //{url: "http://localhost/Dashboards/Audit_Dashboard_3.php", time: 15},
     //{url: "http://localhost/Dashboards/Audit_Dashboard_4.php", time: 15},
     //{url: "http://localhost/Dashboards/Audit_Dashboard_5.php", time: 45},

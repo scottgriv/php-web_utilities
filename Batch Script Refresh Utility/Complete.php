@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!-- Developed by: Scott Grivner -->
-<!-- Application: Batch Script Refresh Utility -->
-<!-- Version: 1.0 -->
-<!-- Date Created: 10/05/2016 -->
-<!-- Date Last Updated: 10/05/2016 -->
+<!-- Author: Scott Grivner -->
+<!-- Website: scottgrivner.dev -->
+<!-- Abstract: Batch Script Refresh Utility -->
 <html>
 <head>
-		<link rel="icon" 
-		type="image/png" 
-		href="Logo.ico">
+		<title>Batch Script Refresh Utility</title>
+    	<link rel="icon" type="image/png" href="images/favicon.ico">
 		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 <script>
 function refresh(){
@@ -60,12 +57,12 @@ $(document).ready(function(){
 	shell_exec('cd /d {DriveLetter}: && {Batch File}bat'); //Replace here as well.
 ?>
 			<div style="text-align:center;">
-					<IMG SRC="Logo.png">
+					<IMG SRC="logo.png">
 			</div>
 			<br>
 			<div style="text-align:center;"><b>Click the button below to return to original page.</b></div>
 			<br>
-		<form method="get" action="Update.php">
+		<form method="get" action="update.php">
 			<div style="text-align:center;">
 				<button type="submit">
 					<img src="SuccessBtn.png">

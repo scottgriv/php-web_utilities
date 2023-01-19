@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!-- Developed by: Scott Grivner -->
-<!-- Application: Batch Script Refresh Utility -->
-<!-- Version: 1.0 -->
-<!-- Date Created: 10/05/2016 -->
-<!-- Date Last Updated: 10/05/2016 -->
+<!-- Author: Scott Grivner -->
+<!-- Website: scottgrivner.dev -->
+<!-- Abstract: Batch Script Refresh Utility -->
 <html>
 <head>
-		<link rel="icon" 
-		type="image/png" 
-		href="Logo.ico">
+    <title>Batch Script Refresh Utility</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
 		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 <script>
 function refresh(){
@@ -16,7 +13,7 @@ function refresh(){
     $('#overlay').show();
     // Retrieve data:
     $.ajax({
-    url: "Complete.php",
+    url: "complete.php",
     context: document.body,
     success: function(s,x){
         $(this).html(s);
@@ -35,7 +32,7 @@ $(document).ready(function(){
         height: $(window).height() + 'px',
         opacity:0.4, 
         background: 'lightgray url(loading.gif) no-repeat center',
-		url: 'Complete.php'
+		url: 'complete.php'
     }).hide().appendTo('body');
 
 });
@@ -54,10 +51,10 @@ button
 <body>
 
 			<div style="text-align:center;">
-					<IMG SRC="Logo.png">
+					<IMG SRC="logo.png">
 			</div>
 						<br>
-	<div style="text-align:center;"><b>Click the button below to run the F9 Data Refresh.</b></div>
+	<div style="text-align:center;"><b>Click the button below to run your Batch File.</b></div>
 				<br>
 	<div style="text-align:center;">
 		<button type="submit" onclick="refresh();">

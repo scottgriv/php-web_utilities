@@ -1,8 +1,9 @@
+<!DOCTYPE html>
+<!-- Author: Scott Grivner -->
+<!-- Website: scottgrivner.dev -->
+<!-- Abstract: Display Solution -->
 <html>
 <!--<meta http-equiv="refresh" content="300">-->
-<link rel="icon" 
-		type="image/png" 
-		href="Logo.ico">
 <?php
 	ini_set('MAX_EXECUTION_TIME', -1);
 	$ini = parse_ini_file('config.ini'); 						//This must point to the directory the config file is in
@@ -13,12 +14,13 @@
     $file_count = count(glob("$countDirect/*$extension"));		//file count for the number of images in the image directory
 ?>
 <head>
-<title>Display Solution</title>
+    <title>Display Solution</title>
+    <link rel="icon" type="image/png" href="docs/images/favicon.ico">
 </head>
 <body>
     
-	<!-- Default Logo -->
-	<img src="Logo.jpg" width="100%" height="100%" id="rotator"/>
+<!-- Default Logo - Change the width/height to 100% to fit the images over the entire screen -->
+<img src="docs/images/logo.jpg" width="10%" height="10%" id="rotator"/>
 
 <script type="text/javascript">
 (function() {

@@ -174,7 +174,7 @@
 			$('#overlay').show();
 			// Retrieve data:
 			$.ajax({
-				url: "Audit_Dashboard.php",
+				url: "Audit_Dashboard_Demo.php",
 				context: document.body,
 				success: function(s, x) {
 					$(this).html(s);
@@ -192,7 +192,7 @@
 				width: '100%',
 				height: $(window).height() + 'px',
 				//opacity:0.4, 
-				//background: 'lightgray url(loading.gif) no-repeat center'
+				//background: 'lightgray url(http://localhost/Audit Dashboards/loading.gif) no-repeat center'
 			}).hide().appendTo('body');
 
 			// Execute refresh with interval:
@@ -283,14 +283,11 @@
 				// Is number between 6 and 10?
 				if ($n >= 8 && $n <= 12) {
 					$file = 'ding.wav';
-					echo "<embed src =\"$file\" hidden=\"true\" autostart=\"true\"></embed>";
 					return "orange";
 				}
 
 				// Is number greater than 11
 				if ($n >= 13) {
-					$file = 'ding.wav';
-					echo "<embed src =\"$file\" hidden=\"true\" autostart=\"true\"></embed>";
 					return "red";
 				}
 
@@ -298,59 +295,24 @@
 				return "green";
 			}
 
-			global $db;
-			global $db2;
-			global $db3;
-			//Database Connection Points
-			$db = odbc_connect("server", "user", "pass") or die("could not connect<br />");
-			$db2 = odbc_connect("server", "user", "pass") or die("could not connect<br />");
-			$db3 = odbc_connect("server", "user", "pass") or die("could not connect<br />");
-
-			//Count Queries
-			//Table A
-			$stmt1 = "SELECT COUNT(*) AS COUNT FROM Table_A";
-			$result1 = odbc_exec($db, $stmt1);
-			//Table B
-			$stmt2 = "SELECT COUNT(*) AS COUNT FROM Table_B";
-			$result2 = odbc_exec($db2, $stmt2);
-			//Table C
-			$stmt3 = "SELECT COUNT(*) AS COUNT FROM Table_C";
-			$result3 = odbc_exec($db2, $stmt3);
-			///Table D
-			$stmt4 = "SELECT COUNT(*) AS COUNT FROM Table_D";
-			$result4 = odbc_exec($db, $stmt4);
-			//Table E
-			$stmt5 = "SELECT COUNT(*) AS COUNT FROM Table_E";
-			$result5 = odbc_exec($db, $stmt5);
-			//Table F
-			$stmt6 = "SELECT COUNT(*) AS COUNT FROM Table_F";
-			$result6 = odbc_exec($db, $stmt6);
-
 			//Set Colors
-			$color1 = getColor(odbc_result($result1, "COUNT"));
-			$color2 = getColor(odbc_result($result2, "COUNT"));
-			$color3 = getColor(odbc_result($result3, "COUNT"));
-			$color4 = getColor(odbc_result($result4, "COUNT"));
-			$color5 = getColor(odbc_result($result5, "COUNT"));
-			$color6 = getColor(odbc_result($result6, "COUNT"));
+			$color1 = getColor("1");
+			$color2 = getColor("10");
+			$color3 = getColor("4");
+			$color4 = getColor("3");
+			$color5 = getColor("36");
+			$color6 = getColor("0");
 
 			//Display Results
 			print "<tr>";
-			print "  <td style=\"background-color:$color1;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . odbc_result($result1, "COUNT") . "</font></span></td>";
-			print "  <td style=\"background-color:$color2;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . odbc_result($result2, "COUNT") . "</font></span></td>";
-			print "  <td style=\"background-color:$color3;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . odbc_result($result3, "COUNT") . "</font></span></td>";
-			print "  <td style=\"background-color:$color4;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . odbc_result($result4, "COUNT") . "</font></span></td>";
-			print "  <td style=\"background-color:$color5;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . odbc_result($result5, "COUNT") . "</font></span></td>";
-			print "  <td style=\"background-color:$color6;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . odbc_result($result6, "COUNT") . "</font></span></td>";
+			print "  <td style=\"background-color:$color1;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . "1" . "</font></span></td>";
+			print "  <td style=\"background-color:$color2;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . "10" . "</font></span></td>";
+			print "  <td style=\"background-color:$color3;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . "4" . "</font></span></td>";
+			print "  <td style=\"background-color:$color4;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . "3" . "</font></span></td>";
+			print "  <td style=\"background-color:$color5;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . "36" . "</font></span></td>";
+			print "  <td style=\"background-color:$color6;\" align=\"center\"><font face='Verdana, Arial, Helvetica'size='8' color='black'><b>" . "0" . "</font></span></td>";
 			print "</tr>";
 
-
-			odbc_free_result($result1);
-			odbc_free_result($result2);
-			odbc_free_result($result3);
-			odbc_free_result($result4);
-			odbc_free_result($result5);
-			odbc_free_result($result6);
 			?>
 		</table>
 	</div>
@@ -385,43 +347,11 @@
 
 			<?php
 
-			$tablestmt1 = "SELECT 
-							   Column_1, 
-							   Column_2, 
-							   Column_3, 
-							   Column_4, 
-							   Column_5, 
-							   Column_6, 
-							   Column_7, 
-							   Column_8 
-							   FROM Table_A";
-			$tableresult1 = odbc_exec($db, $tablestmt1);
+			print "<tr>\n";
+			print "  <td colspan='8' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' .
+				"</b></font>\n";
+			print "</tr>\n";
 
-			if (odbc_num_rows($tableresult1) < 1) {
-				$file = 'ding.wav';
-				print "<tr>\n";
-				print "  <td colspan='8' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' .
-					"</b></font>\n";
-				print "</tr>\n";
-			} else {
-
-
-				while (odbc_fetch_row($tableresult1)) // while there are rows
-				{
-					print "<tr>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_1") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_2") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_3") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_4") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_5") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_6") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_7") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult1, "Column_8") .  "</font>\n";
-					print "</tr>\n";
-				}
-			}
-
-			odbc_free_result($tableresult1);
 			?>
 		</table>
 	</div>
@@ -450,36 +380,11 @@
 
 			<?php
 
-			$tablestmt2 = "SELECT 
-							   Column_1, 
-							   Column_2, 
-							   Column_3, 
-							   Column_4, 
-							   Column_5
-							   FROM Table_B";
-			$tableresult2 = odbc_exec($db, $tablestmt2);
 
-			if (odbc_num_rows($tableresult2) < 1) {
-				print "<tr>\n";
-				print "  <td colspan='5' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' . "</b></font>\n";
-				print "</tr>\n";
-			} else {
+			print "<tr>\n";
+			print "  <td colspan='5' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' . "</b></font>\n";
+			print "</tr>\n";
 
-				while (odbc_fetch_row($tableresult2)) // while there are rows
-				{
-					print "<tr>\n";
-					print "  <td>" . odbc_result($tableresult2, "Column_1") . "\n";
-					print "  <td>" . odbc_result($tableresult2, "Column_2") . "\n";
-					print "  <td>" . odbc_result($tableresult2, "Column_3") . "\n";
-					print "  <td>" . odbc_result($tableresult2, "Column_4") . "\n";
-					print "  <td>" . odbc_result($tableresult2, "Column_5") . "\n";
-					print "</tr>\n";
-				}
-			}
-
-
-			odbc_free_result($tableresult2);
-			odbc_close($db);
 			?>
 
 		</table>
@@ -501,32 +406,11 @@
 
 			<?php
 
-			$tablestmt3 = "SELECT 
-							   Column_1, 
-							   Column_2, 
-							   Column_3
-							   FROM Table_C";
-			$tableresult3 = odbc_exec($db, $tablestmt3);
+			print "<tr>\n";
+			print "  <td colspan='3' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' .
+				"</b></font>\n";
+			print "</tr>\n";
 
-			if (odbc_num_rows($tableresult3) < 1) {
-				print "<tr>\n";
-				print "  <td colspan='3' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' .
-					"</b></font>\n";
-				print "</tr>\n";
-			} else {
-
-
-				while (odbc_fetch_row($tableresult3)) // while there are rows
-				{
-					print "<tr>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult3, "Column_1") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult3, "Column_2") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult3, "Column_3") . "</font>\n";
-					print "</tr>\n";
-				}
-			}
-
-			odbc_free_result($tableresult3);
 			?>
 		</table>
 	</div>
@@ -546,80 +430,34 @@
 
 			<?php
 
-			$tablestmt4 = "SELECT 
-							   Column_1, 
-							   Column_2, 
-							   Column_3
-							   FROM Table_D";
-			$tableresult4 = odbc_exec($db, $tablestmt4);
+			print "<tr>\n";
+			print "  <td colspan='3' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' .
+				"</b></font>\n";
+			print "</tr>\n";
 
-
-			if (odbc_num_rows($tableresult4) < 1) {
-				print "<tr>\n";
-				print "  <td colspan='3' align=\"center\"><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . 'No Records' .
-					"</b></font>\n";
-				print "</tr>\n";
-			} else {
-
-
-				while (odbc_fetch_row($tableresult4)) // while there are rows
-				{
-					print "<tr>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult4, "Column_1") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult4, "Column_2") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult4, "Column_3") . "</font>\n";
-					print "</tr>\n";
-				}
-			}
-
-			odbc_free_result($tableresult4);
 			?>
 		</table>
 	</div>
 
-	<div class="service" style="width:360px; height:210px; overflow:auto; text-align: center; position: center;">
-		<table cellspacing="0" cellpadding="0" border="0" width="360" bgcolor=#FFFFFF>
+	<div class="service" style="width:300px; height:165px; overflow:auto; text-align: center; position: center;">
+		<table cellspacing="0" cellpadding="0" border="0" width="300" bgcolor=#FFFFFF>
 			<tr>
 				<th bgcolor="#000000">
-					<font face='Verdana, Arial, Helvetica' size='2' color="white">Column 1</font>
+					<font face='Verdana, Arial, Helvetica' size='2' color="white">Service 1</font>
 				</th>
 				<th bgcolor="#000000">
-					<font face='Verdana, Arial, Helvetica' size='2' color="white">Column 2</font>
+					<font face='Verdana, Arial, Helvetica' size='2' color="white">Service 2</font>
 				</th>
 			</tr>
 
 			<?php
 
-			$tablestmt5 = "SELECT 
-							   Column_1, 
-							   Column_2
-							   FROM Table_E";
-			$tableresult5 = odbc_exec($db, $tablestmt5);
 
+			print "<tr>\n";
+			print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . "Running" .  "</b></font>\n";
+			print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='red'><b>" . "Not Running" . "</b></font>\n";
+			print "</tr>\n";
 
-
-			while (odbc_fetch_row($tableresult5)) // while there are rows
-			{
-
-				if (odbc_result($tableresult5, "Column_2") == "Running") {
-					print "<tr>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult5, "Column_1") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='green'><b>" . odbc_result($tableresult5, "Column_2") . "</b></font>\n";
-					print "</tr>\n";
-				} else {
-
-					print "<tr>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='black'>" . odbc_result($tableresult5, "Column_1") .  "</font>\n";
-					print "  <td><font face='Verdana, Arial, Helvetica'size='2' color='red'><b>" . odbc_result($tableresult5, "Column_2") . "</b></font>\n";
-					print "</tr>\n";
-
-					$file = 'ding.wav';
-					echo "<embed src =\"$file\" hidden=\"true\" autostart=\"true\"></embed>";
-				}
-			}
-
-
-			odbc_free_result($tableresult5);
 			?>
 		</table>
 	</div>

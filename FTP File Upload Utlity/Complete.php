@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!-- Developed by: Scott Grivner -->
-<!-- Application: FTP File Upload Utlity -->
-<!-- Version: 1.0 -->
-<!-- Date Created: 10/07/2016 -->
-<!-- Date Last Updated: 10/07/2016 -->
+<!-- Author: Scott Grivner -->
+<!-- Website: scottgrivner.dev -->
+<!-- Abstract: FTP File Upload Utility -->
 <html>
 <head>
-		<link rel="icon" 
-		type="image/png" 
-		href="Logo.ico">
+	<title>FTP File Upload Utility</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
 	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 <script>
 function refresh(){
@@ -57,7 +54,7 @@ error_reporting(0);
 //Setup Array for accepted document types.
 $mimes = array('application/vnd.ms-excel','text/plain','text/csv','text/tsv');
 
-//Aquire file temp name, file full path name, username, and password from Upload.php post.
+//Aquire file temp name, file full path name, username, and password from upload.php post.
 $file = $_FILES['file']['tmp_name'];
 $filename = $_FILES['file']['name'];
 $ftp_user_name = $_POST['username'];
@@ -142,7 +139,7 @@ if ($msg != '') {
 	$message1 = '+ + + + + + ERROR:++User:' . $ftp_user_name . '++Message:' . $err . '';
 }
             
-if ($log = fopen('Upload_Log.log', 'at'))
+if ($log = fopen('upload_log.log', 'at'))
 	{
 	
 		fwrite($log, date('c') . ' ' . $message1 . PHP_EOL);
@@ -151,14 +148,14 @@ if ($log = fopen('Upload_Log.log', 'at'))
 
 ?>
 		<div style="text-align:center;">
-			<IMG SRC="Logo.png">
+			<IMG SRC="logo.png">
 			</div>
 			<div style="text-align:center;"><font color="green"><b><?= $msg ?></b></font></div>
 			<div style="text-align:center;"><font color="red"><b><?= $err ?></b></font></div>
 			<br>
 			<div style="text-align:center;"><b>Click the button below to return to original page.</b></div>
 			<br>
-		<form method="get" action="Upload.php">
+		<form method="get" action="upload.php">
 			<div style="text-align:center;">
 				<button type="submit">
 					<img src="ReturnBtn.png">
