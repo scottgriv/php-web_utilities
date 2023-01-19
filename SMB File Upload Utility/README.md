@@ -4,12 +4,11 @@ Upload and move files using SMB protocol through a web interface without end use
 ![Demo](./images/demo.png)
 
 ## Getting Started
-Go to: http://{ServerName}:{Port}/upload.php
-Login with your FTP username and password.
-Select and upload the file.
+- Go to the full ``upload.php`` web server address in your web browser.
+- Select and upload the file.
 
 ## Deployment
-Edit the config.ini file with the necessary credentials for connecting to the directory you plan on dropping the file in.
+Edit the ``resources/config.ini`` file with the necessary credentials for connecting to the directory you plan on dropping the file in.
 
 -----
 

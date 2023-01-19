@@ -4,11 +4,11 @@ Cycle through image files in a declared directory for informative displays.
 ![Demo](./docs/images/demo.gif)
 
 ## Getting Started
-To view the web page go to the servers address that it's placed on and append ../{FolderPath}/Display_Solution.php
+- Go to the full ``Display_Solution.php`` web server address in your web browser.
 
 ``ex. http://localhost/Folder/Display_Solution.php``
 
-The naming scheme for the images will be an incremental number in order to control the sequence of the images.
+- The naming scheme for the images will be an incremental number in order to control the sequence of the images.
 
 ``ex. 1.jpg, 2.jpg, 3.jpg....10.jpg, etc.``
 

@@ -4,12 +4,12 @@ Upload files to a remote FTP site through a web interface without end user serve
 ![Demo](./images/demo.png)
 
 ## Getting Started
-Go to: http://{ServerName}:{Port}/upload.php
-Login with your FTP username and password.
-Select and upload the file.
+- Go to the full ``upload.php`` web server address in your web browser.
+- Enter your FTP login credentials.
+- Select and upload the file.
 
 ## Deployment
-Ensure proper user credentials are used to FTP to the FTP Site.
+Ensure proper access and user credentials are used to connect to the FTP Server.
 
 -----
 

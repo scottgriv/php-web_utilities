@@ -4,12 +4,12 @@ Run a batch file through a web interface without end user server access.
 ![Demo](./images/demo.gif)
 
 ## Getting Started
-Go to: http://{ServerName}:{Port}/update.php
-Press the "Run Script" button.
-A success button will be shown when the script is done executing.
+- Go to the full ``update.php`` web server address in your web browser.
+- Press the "Run Script" button.
+- A success button will be shown when the script is done executing.
 
 ## Deployment
-Ensure OS permission to accesss the batch file.
+Ensure OS file permission to run the batch file.
 
 -----
 
