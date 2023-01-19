@@ -9,7 +9,8 @@ Run a batch file through a web interface without end user server access.
 - A success button will be shown when the script is done executing.
 
 ## Deployment
-Ensure OS file permission to run the batch file.
+- Ensure OS file permission to run the batch file.
+- Feel free to add your company's logo by replacing the ``logo.png`` file.
 
 -----
 

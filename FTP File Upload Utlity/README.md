@@ -9,7 +9,8 @@ Upload files to a remote FTP site through a web interface without end user serve
 - Select and upload the file.
 
 ## Deployment
-Ensure proper access and user credentials are used to connect to the FTP Server.
+- Ensure proper access and user credentials are used to connect to the FTP Server.
+- Feel free to add your company's logo by replacing the ``logo.png`` file.
 
 -----
 

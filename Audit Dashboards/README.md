@@ -1,5 +1,5 @@
 # Audit Dashboards
-Connects to database tables in order to display record counts and create audible threshold alerts.
+Connects to database tables in order to display record counts and play audible threshold alerts.
 
 ![Demo](./images/demo.png)
 
@@ -12,6 +12,7 @@ Connects to database tables in order to display record counts and create audible
 - Specify your database connection and queries in the php file.
 - I strongly recommend including ``WHERE`` and ``LIMIT`` clauses to minimize the result set loading times.
 - Run the ```Audit_Dashboard_Demo.php``` in your browser to get a static demo of what the webpage will look like when running properly.
+- Feel free to add your company's logo by replacing the ``logo.png`` file.
 
 -----
 

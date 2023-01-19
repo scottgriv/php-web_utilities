@@ -15,7 +15,7 @@ Cycle through image files in a declared directory for informative displays.
 ## Deployment
 Edit the ``config.ini`` file with the needed parameters to run, ex:
 
-- **directory** = the directory the images folder will be in with backward slashes '\'
+- **directory** = the directory the images folder will be in with backward slashes '\\'
 - **countDirect** = the same directory as the 'directory' parameter above, except the folder slashes are forward slashes '/' not back slashes
 - **extension** = the file extension for the images, this must be the same format for all the images ex. .jpg, .jpeg, .png
 - **seconds** = the number of seconds before the script will display the next image
@@ -30,9 +30,9 @@ seconds = 7
 ```
 
 ## Changing the image size on the screen
-Go to ``Display_Solution.php`` and change the width and height in the following code to adjust the size of the slides (i.e. 100% for full screen):
+- Go to ``Display_Solution.php`` and change the width and height in the following code to adjust the size of the slides (i.e. 100% for full screen):
+- Feel free to add your company's logo by replacing the ``docs/logo.jpg`` file (which indicates the start of the slide show).
 
-Also, you can update your company logo (which indicates the start of the slide show) by replacing the logo.jpg file.
 ```
 <img src="docs/images/logo.jpg" width="100%" height="100%" id="rotator"/>
 ```
