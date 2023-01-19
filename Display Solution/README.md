@@ -30,7 +30,7 @@ seconds = 7
 ```
 
 ## Changing the image size on the screen
-Go to Display_Solution.php and change the width and height in the following code to adjust the size of the slides (i.e. 100% for full screen):
+Go to ``Display_Solution.php`` and change the width and height in the following code to adjust the size of the slides (i.e. 100% for full screen):
 
 Also, you can update your company logo (which indicates the start of the slide show) by replacing the logo.jpg file.
 ```
