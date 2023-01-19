@@ -6,14 +6,14 @@ Cycle through image files in a declared directory for informative displays.
 ## Getting Started
 - Go to the full ``Display_Solution.php`` web server address in your web browser.
 
-``ex. http://localhost/Folder/Display_Solution.php``
+    ``ex. http://localhost/Folder/Display_Solution.php``
 
 - The naming scheme for the images will be an incremental number in order to control the sequence of the images.
 
-``ex. 1.jpg, 2.jpg, 3.jpg....10.jpg, etc.``
+    ``ex. 1.jpg, 2.jpg, 3.jpg....10.jpg, etc.``
 
 ## Deployment
-Edit the ``config.ini`` file with the needed parameters to run, ex:
+Edit the ``config.ini`` file with the necessary parameters to run, ex:
 
 - **directory** = the directory the images folder will be in with backward slashes '\\'
 - **countDirect** = the same directory as the 'directory' parameter above, except the folder slashes are forward slashes '/' not back slashes
@@ -31,11 +31,10 @@ seconds = 7
 
 ## Changing the image size on the screen
 - Go to ``Display_Solution.php`` and change the width and height in the following code to adjust the size of the slides (i.e. 100% for full screen):
-- Feel free to add your company's logo by replacing the ``docs/logo.jpg`` file (which indicates the start of the slide show).
-
 ```
 <img src="docs/images/logo.jpg" width="100%" height="100%" id="rotator"/>
 ```
+- Feel free to add your company's logo by replacing the ``docs/logo.jpg`` file (which indicates the start of the slide show).
 
 -----
 

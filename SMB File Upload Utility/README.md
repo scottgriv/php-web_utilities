@@ -10,6 +10,7 @@ Upload and move files using SMB protocol through a web interface without end use
 ## Deployment
 - Edit the ``resources/config.ini`` file with the necessary credentials for connecting to the directory you plan on dropping the file in.
 - Feel free to add your company's logo by replacing the ``images/logo.png`` file.
+- Update the email informaton in the ``complete.png`` file for the application to send out email notifications upon completion.
 
 -----
 
