@@ -15,13 +15,10 @@ The naming scheme for the images will be an incremental number in order to contr
 ## Deployment
 Edit the config.ini file with the needed parameters to run, ex:
 
-``directory = the directory the images folder will be in with backward slashes '\'``
-
-``countDirect = the same directory as the 'directory' parameter above, except the folder slashes are forward slashes '/' not back slasbes``
-
-``extension = the file extension for the images, this must be the same format for all the images ex. .jpg, .jpeg, .png``
-
-``seconds = the number of seconds before the script will display the next image``
+- **directory** = the directory the images folder will be in with backward slashes '\'
+- **countDirect** = the same directory as the 'directory' parameter above, except the folder slashes are forward slashes '/' not back slashes
+- **extension** = the file extension for the images, this must be the same format for all the images ex. .jpg, .jpeg, .png
+- **seconds** = the number of seconds before the script will display the next image
 
 A finished example of the config.ini should look something similar to this (you can change the image path to use remote folders, by default it uses the ``images`` folder in the script root directory):
 ```
