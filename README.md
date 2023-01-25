@@ -32,5 +32,5 @@ Run a batch file through a web interface without end user server access.
 ## Credit
 **Author:** Scott Grivner <br>
 **Email:** scott.grivner@gmail.com <br>
-**Website:** [scottgrivner.dev](https://www.scottgriv.dev) <br>
+**Website:** [scottgrivner.dev](https://www.scottgrivner.dev) <br>
 **Reference:** [Main Branch](https://github.com/scottgriv/php-web_utilities)
